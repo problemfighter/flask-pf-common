@@ -9,4 +9,5 @@ class Base(database.Model):
     id = database.Column(database.BigInteger, primary_key=True)
     created = database.Column(database.DateTime, default=database.func.now())
     updated = database.Column(database.DateTime, default=database.func.now(), onupdate=database.func.now())
-    uuid = database.Column(database.String, default=get_uuid())
+    uuid = database.Column(database.String(50), default=get_uuid())
+    is_deleted = database.Column(database.Boolean, default=False)

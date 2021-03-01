@@ -7,16 +7,13 @@ setup(
     license='Apache 2.0',
     author='Touhid Mia',
     author_email='hmtm.cse@gmail.com',
-    description='This is Problem Fighter Flask Marshmallow Swagger Extension',
+    description='This is Problem Fighter Flask Common Extension',
     long_description=__doc__,
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
     platforms='any',
-    install_requires=[
-        'Flask',
-        'Flask-SQLAlchemy'
-    ],
+    install_requires=[],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

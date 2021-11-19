@@ -25,7 +25,10 @@ class PFFRequestHeaderHelper:
     def get_url_info(self):
         url_dictionary = {}
         if request and request.url:
-            url_dictionary['relative_url'] = str(request.url_rule)
+            if not request.url_rule:
+                url_dictionary['relative_url'] = None
+            else:
+                url_dictionary['relative_url'] = str(request.url_rule)
             url_dictionary['relative_url_with_param'] = str(request.full_path)
             url_dictionary['host_with_port'] = str(request.host)
             url_dictionary['method'] = str(request.method)
